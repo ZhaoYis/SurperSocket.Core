@@ -14,11 +14,13 @@
 SurperSocket协议地址：http://docs.supersocket.net/v1-6/zh-CN/The-Built-in-Common-Format-Protocol-Implementation-Templates
 
 服务端启动方式：
-```C#SocketServiceEasyClient easyClient = new SocketServiceEasyClient();
+```C#
+SocketServiceEasyClient easyClient = new SocketServiceEasyClient();
 easyClient.InitEasyClient();
 ```
 
 客户端启动方式：
+```C#
 SocketClientEasyClient client = new SocketClientEasyClient(new IPEndPoint(IPAddress.Parse("192.168.31.38"), 9005));
 EasyClient<CustomPackageInfo> res = client.InitEasyClient();
 while (Console.ReadLine() != "")
@@ -27,3 +29,4 @@ while (Console.ReadLine() != "")
     string json = data.GetTransmitPackets(CustomCommand.Test);
     res.Send(CustomCommand.Test, json);
  }
+```
