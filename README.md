@@ -15,7 +15,8 @@ SurperSocket协议地址：http://docs.supersocket.net/v1-6/zh-CN/The-Built-in-C
 
 服务端启动方式：
 ```C#SocketServiceEasyClient easyClient = new SocketServiceEasyClient();
-```C#easyClient.InitEasyClient();
+easyClient.InitEasyClient();
+```
 
 客户端启动方式：
 SocketClientEasyClient client = new SocketClientEasyClient(new IPEndPoint(IPAddress.Parse("192.168.31.38"), 9005));
