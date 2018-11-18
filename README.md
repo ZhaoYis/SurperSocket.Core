@@ -1,0 +1,2 @@
+# SurperSocket.Core
+基于SurperSocket自定义命令方式（头部格式固定并且包含内容长度的协议）实现一个Socket服务端、客户端，同时对SurperSocket相关常用方法进行了二次封装，完全自定义协议实现
