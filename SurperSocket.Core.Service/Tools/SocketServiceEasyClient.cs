@@ -70,9 +70,6 @@ namespace SurperSocket.Core.Service.Tools
                         break;
 
                     case StartResult.Success:
-                        //保存当前服务器对象
-                        SocketServiceObject.SocketService = new CustomServer();
-
                         break;
 
                     default:

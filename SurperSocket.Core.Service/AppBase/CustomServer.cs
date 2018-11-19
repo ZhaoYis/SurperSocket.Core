@@ -2,6 +2,7 @@
 using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Protocol;
 using SurperSocket.Core.Service.Commands;
+using SurperSocket.Core.Service.Tools;
 
 namespace SurperSocket.Core.Service.AppBase
 {
@@ -22,6 +23,9 @@ namespace SurperSocket.Core.Service.AppBase
         public CustomServer() :
             base(new DefaultReceiveFilterFactory<CustomReceiveFilter, CustomRequestInfo>())
         {
+            //保存当前服务器对象
+            SocketServiceObject.SocketService = this;
+
             this.NewSessionConnected += OnNewSessionConnected;
             this.SessionClosed += OnSessionClosed;
             //this.NewRequestReceived += OnNewRequestReceived;

@@ -20,7 +20,8 @@ namespace SurperSocket.Client
 
             while (Console.ReadLine() != "")
             {
-                string json = "你好！".GetTransmitPackets(CustomCommand.Test);
+                string data = Console.ReadLine();
+                string json = data.GetTransmitPackets(CustomCommand.Test);
                 res.Send(CustomCommand.Test, json);
             }
 
